@@ -262,3 +262,4 @@ export default function ProjectDetails({ projectId, onBack, onNavigateProject })
     </div>
   );
 }
+
