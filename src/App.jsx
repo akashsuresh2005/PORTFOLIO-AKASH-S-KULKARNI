@@ -11,7 +11,6 @@ import CodingProfiles from './components/CodingProfiles';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackgroundEffects from './components/BackgroundEffects';
-import CustomCursor from './components/CustomCursor';
 import ProjectDetails from './pages/ProjectDetails';
 import { ArrowUp } from 'lucide-react';
 
@@ -60,9 +59,6 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-[#080B14] text-[#F8FAFC] selection:bg-cyan-500/20 selection:text-cyan-200">
-      {/* Interactive Desktop Custom Cursor */}
-      <CustomCursor />
-
       {/* Background Animated Atmosphere */}
       <BackgroundEffects />
 

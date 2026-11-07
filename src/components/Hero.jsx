@@ -15,16 +15,16 @@ import {
 } from 'lucide-react';
 
 const roles = [
-  'Full-Stack Developer',
-  'Software Developer',
+  'Software Engineer',
   'Data Analyst',
-  'AI/ML Enthusiast',
+  'Machine Learning Engineer',
+  'Python & SQL Specialist',
   'Problem Solver',
 ];
 
 const floatingBadges = [
-  { name: 'Python', icon: '🐍', color: '#38BDF8', top: '-12px', right: '18px' },
-  { name: 'React 18', icon: '⚛️', color: '#22D3EE', bottom: '-15px', right: '40px' },
+  { name: 'Python', icon: '🐍', color: '#38BDF8', top: '-14px', right: '24px' },
+  { name: 'SQL & DB', icon: '🗄️', color: '#22D3EE', bottom: '-15px', right: '40px' },
   { name: 'FastAPI', icon: '⚡', color: '#10B981', top: '45%', right: '-24px' },
   { name: 'TensorFlow', icon: '🧠', color: '#F59E0B', bottom: '25%', left: '-20px' },
   { name: 'Power BI', icon: '📊', color: '#8B5CF6', top: '15%', left: '-22px' },
@@ -66,16 +66,16 @@ export default function Hero() {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center pt-28 pb-16 lg:py-0 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-32 pb-20 lg:py-0 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           
           {/* Left Column: Text & Intro */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6">
             
             {/* Greeter Tag */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/70 backdrop-blur-md mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-900/90 border border-slate-700/70 backdrop-blur-md shadow-sm">
               <span className="text-sm">👋</span>
               <span className="font-mono text-xs font-semibold tracking-wider text-cyan-300 uppercase">
                 HELLO, WORLD!
@@ -84,18 +84,20 @@ export default function Hero() {
             </div>
 
             {/* Main Name & Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-              I&apos;M <span className="text-gradient-cyan-blue">AKASH SURESH KULKARNI</span>
-            </h1>
+            <div className="space-y-3">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+                I&apos;M <span className="text-gradient-cyan-blue">AKASH SURESH KULKARNI</span>
+              </h1>
 
-            <div className="mt-3 text-base sm:text-lg text-slate-300 font-medium flex items-center gap-2 flex-wrap">
-              <span>Computer Science Engineering Student</span>
-              <span className="text-cyan-400 font-bold hidden sm:inline">•</span>
-              <span className="text-cyan-300 font-mono">Aspiring Software Engineer</span>
+              <div className="text-base sm:text-lg text-slate-300 font-medium flex items-center gap-2 flex-wrap">
+                <span>Computer Science Engineering Student</span>
+                <span className="text-cyan-400 font-bold hidden sm:inline">•</span>
+                <span className="text-cyan-300 font-mono">Bangalore Institute of Technology</span>
+              </div>
             </div>
 
             {/* Dynamic Animated Typewriter Headline */}
-            <div className="mt-6 flex items-center min-h-[44px]">
+            <div className="flex items-center min-h-[44px]">
               <span className="text-lg sm:text-2xl font-mono text-slate-200">
                 &gt;&nbsp;
                 <span className="text-sky-300 font-semibold">{displayedText}</span>
@@ -103,20 +105,20 @@ export default function Hero() {
               </span>
             </div>
 
-            <p className="mt-2 text-sm sm:text-base font-medium italic text-slate-400">
+            <p className="text-sm sm:text-base font-medium italic text-slate-400">
               &ldquo;Building intelligent solutions through code, data and innovation.&rdquo;
             </p>
 
             {/* Supporting Description */}
-            <p className="mt-5 text-sm sm:text-base text-slate-300/90 leading-relaxed max-w-2xl">
-              I am a Computer Science Engineering student with a strong foundation in programming, databases, software development, data analytics, and machine learning. I enjoy transforming complex problems into practical, scalable, and intelligent solutions through technology.
+            <p className="text-sm sm:text-base text-slate-300/90 leading-relaxed max-w-2xl">
+              I am a Computer Science Engineering student with a strong foundation in programming, databases, software systems, data analytics, and machine learning. I enjoy transforming complex problems into practical, scalable, and intelligent solutions through technology.
             </p>
 
             {/* Call To Action Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3.5 w-full sm:w-auto">
+            <div className="pt-2 flex flex-wrap items-center gap-4 w-full sm:w-auto">
               <a
                 href="#projects"
-                className="group relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 shadow-glow-cyan transition-all duration-300 active:scale-95"
+                className="group relative inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-cyan-500 via-sky-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 shadow-glow-cyan transition-all duration-300 active:scale-95"
               >
                 <span>Explore My Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -125,7 +127,7 @@ export default function Hero() {
               <a
                 href="/Akash_Suresh_Kulkarni_Resume.pdf"
                 download="Akash_Suresh_Kulkarni_Resume.pdf"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium text-sm text-slate-200 bg-slate-900/90 hover:bg-slate-850 hover:text-white border border-slate-700/80 hover:border-slate-500 shadow-sm transition-all duration-200 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-medium text-sm text-slate-200 bg-slate-900/90 hover:bg-slate-800 hover:text-white border border-slate-700/80 hover:border-slate-500 shadow-sm transition-all duration-200 active:scale-95"
               >
                 <FileDown className="w-4 h-4 text-cyan-400" />
                 <span>Download Resume</span>
@@ -133,7 +135,7 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-medium text-sm text-slate-300 hover:text-white bg-slate-900/50 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 transition-all duration-200 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-medium text-sm text-slate-300 hover:text-white bg-slate-900/50 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 transition-all duration-200 active:scale-95"
               >
                 <Mail className="w-4 h-4 text-violet-400" />
                 <span>Contact Me</span>
@@ -141,7 +143,7 @@ export default function Hero() {
             </div>
 
             {/* Social Links & Highlights */}
-            <div className="mt-10 pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-6 text-sm text-slate-400 w-full">
+            <div className="pt-4 border-t border-slate-800/80 flex flex-wrap items-center gap-6 text-sm text-slate-400 w-full">
               <div className="flex items-center gap-3">
                 <a
                   href="https://github.com/akashsuresh2005"
@@ -214,7 +216,7 @@ export default function Hero() {
             <div className="w-full max-w-lg rounded-2xl bg-[#0B0F19]/95 border border-slate-700/70 shadow-2xl overflow-hidden backdrop-blur-xl transition-all duration-300 hover:border-cyan-500/40 hover:shadow-glow-blue">
               
               {/* Terminal Titlebar */}
-              <div className="flex items-center justify-between px-4 py-3 bg-[#080B14] border-b border-slate-800">
+              <div className="flex items-center justify-between px-5 py-3.5 bg-[#080B14] border-b border-slate-800">
                 <div className="flex items-center gap-2">
                   <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block" />
                   <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
@@ -230,7 +232,7 @@ export default function Hero() {
               </div>
 
               {/* Code Editor Body */}
-              <div className="p-5 font-mono text-xs sm:text-[13px] leading-relaxed text-slate-300 space-y-1.5 selection:bg-cyan-500/20">
+              <div className="p-6 font-mono text-xs sm:text-[13px] leading-relaxed text-slate-300 space-y-1.5 selection:bg-cyan-500/20">
                 
                 <div className="text-slate-500 italic">
                   // Portfolio Engineering Configuration
@@ -272,9 +274,8 @@ export default function Hero() {
                 <div className="pl-4">
                   <span className="text-cyan-400">skills</span>: [
                   <span className="text-amber-300">&quot;Python&quot;</span>,{' '}
-                  <span className="text-amber-300">&quot;React&quot;</span>,{' '}
                   <span className="text-amber-300">&quot;SQL&quot;</span>,{' '}
-                  <span className="text-amber-300">&quot;AI/ML&quot;</span>,{' '}
+                  <span className="text-amber-300">&quot;Machine Learning&quot;</span>,{' '}
                   <span className="text-amber-300">&quot;FastAPI&quot;</span>,{' '}
                   <span className="text-amber-300">&quot;Power BI&quot;</span>
                   ],
@@ -287,14 +288,14 @@ export default function Hero() {
 
                 <div className="pl-4">
                   <span className="text-cyan-400">status</span>:
-                  <span className="text-sky-400"> &quot;Open for Internships &amp; Roles&quot;</span>
+                  <span className="text-sky-400"> &quot;Open for Engineering Roles&quot;</span>
                 </div>
 
                 <div>{'};'}</div>
 
-                <div className="pt-3 border-t border-slate-800/80 mt-3 text-slate-400 flex items-center justify-between">
+                <div className="pt-4 border-t border-slate-800/80 mt-4 text-slate-400 flex items-center justify-between">
                   <span className="text-slate-500">&gt; developer.deploySolution()</span>
-                  <span className="text-emerald-400 font-semibold flex items-center gap-1">
+                  <span className="text-emerald-400 font-semibold flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     STATUS: 200 OK
                   </span>
@@ -303,12 +304,12 @@ export default function Hero() {
               </div>
 
               {/* Terminal Footer Telemetry */}
-              <div className="px-4 py-2 bg-[#080B14]/80 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
+              <div className="px-5 py-2.5 bg-[#080B14]/80 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
                 <span className="flex items-center gap-1.5">
                   <Cpu className="w-3 h-3 text-cyan-400" /> UTF-8
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Layers className="w-3 h-3 text-violet-400" /> React 18 + Vite
+                  <Database className="w-3 h-3 text-violet-400" /> SQL &amp; Python Core
                 </span>
                 <span className="text-cyan-400/80">Ln 24, Col 2</span>
               </div>
@@ -322,4 +323,3 @@ export default function Hero() {
     </section>
   );
 }
-
