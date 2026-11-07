@@ -145,3 +145,4 @@ export default function ProjectCard({ project, onSelect }) {
     </div>
   );
 }
+
