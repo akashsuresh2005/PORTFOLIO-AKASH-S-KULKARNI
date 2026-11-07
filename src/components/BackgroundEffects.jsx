@@ -1,40 +1,44 @@
 import React, { useMemo } from 'react';
 
 export default function BackgroundEffects() {
-  // Generate stable random particle positions
+  // Vibrant multi-hued neon particles
   const particles = useMemo(() => {
-    return Array.from({ length: 28 }, (_, i) => ({
+    const colors = ['#00F5FF', '#A855F7', '#38BDF8', '#10B981', '#F43F5E', '#F59E0B'];
+    return Array.from({ length: 32 }, (_, i) => ({
       id: i,
-      x: (i * 3.7) % 100,
-      y: (i * 5.3 + 7) % 100,
-      size: (i % 3) + 1.5,
-      duration: 18 + (i % 12),
-      delay: (i % 7) * 1.5,
-      opacity: 0.15 + (i % 4) * 0.08,
-      color: i % 3 === 0 ? '#38BDF8' : i % 3 === 1 ? '#8B5CF6' : '#22D3EE',
+      x: (i * 3.1 + 4) % 100,
+      y: (i * 4.7 + 9) % 100,
+      size: (i % 3) + 1.8,
+      duration: 14 + (i % 10),
+      delay: (i % 6) * 1.2,
+      opacity: 0.25 + (i % 4) * 0.12,
+      color: colors[i % colors.length],
     }));
   }, []);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
-      {/* Dynamic Cyber Grid */}
-      <div className="absolute inset-0 cyber-grid opacity-35" />
+      {/* High-Contrast Cyber Grid */}
+      <div className="absolute inset-0 cyber-grid opacity-45" />
 
-      {/* Top Ambient Radial Orbs */}
+      {/* Vibrant Ambient Radial Auroras */}
       <div 
-        className="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[550px] rounded-full glow-orb-blue blur-[120px] opacity-40 animate-pulse-slow" 
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[600px] rounded-full glow-orb-blue blur-[130px] opacity-60 animate-pulse-slow" 
       />
       <div 
-        className="absolute top-1/4 -left-48 w-[500px] h-[500px] rounded-full glow-orb-violet blur-[140px] opacity-25" 
+        className="absolute top-1/4 -left-36 w-[600px] h-[600px] rounded-full glow-orb-violet blur-[140px] opacity-45" 
       />
       <div 
-        className="absolute top-1/2 -right-48 w-[550px] h-[550px] rounded-full glow-orb-cyan blur-[130px] opacity-20" 
+        className="absolute top-1/2 -right-36 w-[650px] h-[650px] rounded-full glow-orb-cyan blur-[130px] opacity-40 animate-pulse-slow" 
       />
       <div 
-        className="absolute top-3/4 left-1/3 w-[600px] h-[600px] rounded-full glow-orb-blue blur-[150px] opacity-20" 
+        className="absolute top-2/3 left-1/4 w-[600px] h-[600px] rounded-full glow-orb-fuchsia blur-[150px] opacity-35" 
+      />
+      <div 
+        className="absolute bottom-10 right-1/4 w-[500px] h-[500px] rounded-full glow-orb-emerald blur-[140px] opacity-30" 
       />
 
-      {/* Subtle Floating Neon Dust Particles */}
+      {/* Floating Vibrant Neon Spark Nodes */}
       <div className="absolute inset-0">
         {particles.map((p) => (
           <div
@@ -47,7 +51,7 @@ export default function BackgroundEffects() {
               height: `${p.size}px`,
               backgroundColor: p.color,
               opacity: p.opacity,
-              boxShadow: `0 0 10px ${p.color}`,
+              boxShadow: `0 0 12px ${p.color}`,
               animationDuration: `${p.duration}s`,
               animationDelay: `${p.delay}s`,
             }}
@@ -55,9 +59,8 @@ export default function BackgroundEffects() {
         ))}
       </div>
 
-      {/* Subtle top vignette */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#080B14]/40 to-[#080B14] pointer-events-none" />
+      {/* Gentle gradient fade */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#070913]/30 to-[#070913] pointer-events-none" />
     </div>
   );
 }
-

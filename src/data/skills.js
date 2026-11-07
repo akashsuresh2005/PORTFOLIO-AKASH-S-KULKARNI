@@ -43,7 +43,7 @@ export const skillCategories = [
     id: 'backend_web',
     title: 'Backend & Web Technologies',
     description: 'Robust server routing, RESTful APIs, and secure authentication',
-    accent: 'violet',
+    accent: 'fuchsia',
     skills: [
       { name: 'Express.js', level: 'Proficient', highlight: true, icon: 'Cpu', desc: 'Middleware Architecture, Routing, RESTful Endpoints' },
       { name: 'REST APIs', level: 'Proficient', highlight: true, icon: 'Network', desc: 'Stateless Service Contracts, CRUD, Status Protocol' },
@@ -55,7 +55,7 @@ export const skillCategories = [
     id: 'databases',
     title: 'Databases & Data Storage',
     description: 'Relational schemas, NoSQL document stores, and query optimization',
-    accent: 'blue',
+    accent: 'emerald',
     skills: [
       { name: 'MySQL', level: 'Proficient', highlight: true, icon: 'Database', desc: 'Relational Schema Design, Normalization, Indexing' },
       { name: 'MongoDB', level: 'Proficient', highlight: true, icon: 'HardDrive', desc: 'Document Schema Design, Aggregation Framework' },
@@ -81,7 +81,7 @@ export const skillCategories = [
     id: 'tools',
     title: 'Developer Tools & Platforms',
     description: 'Modern developer toolchains, containerization, and version control',
-    accent: 'blue',
+    accent: 'amber',
     skills: [
       { name: 'Git & GitHub', level: 'Proficient', highlight: true, icon: 'GitBranch', desc: 'Version Control, Collaborative Branching, Code Reviews' },
       { name: 'VS Code', level: 'Core', highlight: false, icon: 'Code', desc: 'Integrated Development Environment, Debugging' },

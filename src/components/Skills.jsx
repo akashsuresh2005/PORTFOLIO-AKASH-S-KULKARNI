@@ -183,30 +183,80 @@ export default function Skills() {
         {/* Categorized Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           {filteredCategories.map((category) => {
-            const accentBorder = 
-              category.accent === 'blue'
-                ? 'hover:border-sky-500/40'
-                : category.accent === 'cyan'
-                ? 'hover:border-cyan-500/40'
-                : 'hover:border-violet-500/40';
+            const getAccent = () => {
+              switch (category.accent) {
+                case 'blue':
+                  return {
+                    border: 'hover:border-sky-400 hover:shadow-[0_12px_36px_-10px_rgba(56,189,248,0.28)]',
+                    tag: 'text-sky-300 bg-sky-950/80 border-sky-700/60',
+                    dot: 'bg-sky-400',
+                    iconBg: 'bg-sky-950/90 text-sky-300',
+                  };
+                case 'violet':
+                  return {
+                    border: 'hover:border-purple-400 hover:shadow-[0_12px_36px_-10px_rgba(168,85,247,0.28)]',
+                    tag: 'text-purple-300 bg-purple-950/80 border-purple-700/60',
+                    dot: 'bg-purple-400',
+                    iconBg: 'bg-purple-950/90 text-purple-300',
+                  };
+                case 'cyan':
+                  return {
+                    border: 'hover:border-cyan-400 hover:shadow-[0_12px_36px_-10px_rgba(34,211,238,0.28)]',
+                    tag: 'text-cyan-300 bg-cyan-950/80 border-cyan-700/60',
+                    dot: 'bg-cyan-400',
+                    iconBg: 'bg-cyan-950/90 text-cyan-300',
+                  };
+                case 'fuchsia':
+                  return {
+                    border: 'hover:border-fuchsia-400 hover:shadow-[0_12px_36px_-10px_rgba(217,70,239,0.28)]',
+                    tag: 'text-fuchsia-300 bg-fuchsia-950/80 border-fuchsia-700/60',
+                    dot: 'bg-fuchsia-400',
+                    iconBg: 'bg-fuchsia-950/90 text-fuchsia-300',
+                  };
+                case 'emerald':
+                  return {
+                    border: 'hover:border-emerald-400 hover:shadow-[0_12px_36px_-10px_rgba(16,185,129,0.28)]',
+                    tag: 'text-emerald-300 bg-emerald-950/80 border-emerald-700/60',
+                    dot: 'bg-emerald-400',
+                    iconBg: 'bg-emerald-950/90 text-emerald-300',
+                  };
+                case 'amber':
+                  return {
+                    border: 'hover:border-amber-400 hover:shadow-[0_12px_36px_-10px_rgba(245,158,11,0.28)]',
+                    tag: 'text-amber-300 bg-amber-950/80 border-amber-700/60',
+                    dot: 'bg-amber-400',
+                    iconBg: 'bg-amber-950/90 text-amber-300',
+                  };
+                default:
+                  return {
+                    border: 'hover:border-cyan-400 hover:shadow-[0_12px_36px_-10px_rgba(34,211,238,0.28)]',
+                    tag: 'text-cyan-300 bg-cyan-950/80 border-cyan-700/60',
+                    dot: 'bg-cyan-400',
+                    iconBg: 'bg-cyan-950/90 text-cyan-300',
+                  };
+              }
+            };
+
+            const styling = getAccent();
 
             return (
               <div
                 key={category.id}
-                className={`glass-card p-6 rounded-2xl border border-slate-800/80 transition-all duration-300 flex flex-col justify-between ${accentBorder}`}
+                className={`glass-card p-6 rounded-2xl border border-slate-800/90 transition-all duration-300 flex flex-col justify-between ${styling.border}`}
               >
                 <div>
                   {/* Category Header */}
                   <div className="flex items-start justify-between pb-4 border-b border-slate-800/80 mb-5">
                     <div>
                       <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                        <span className={`w-2 h-2 rounded-full ${styling.dot} animate-pulse`} />
                         <span>{category.title}</span>
                       </h3>
                       <p className="text-xs text-slate-400 mt-1">
                         {category.description}
                       </p>
                     </div>
-                    <span className="text-[11px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-900 border border-slate-800">
+                    <span className={`text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full border ${styling.tag}`}>
                       {category.skills.length} techs
                     </span>
                   </div>
@@ -221,14 +271,14 @@ export default function Skills() {
                           key={skill.name}
                           className={`p-3 rounded-xl transition-all duration-200 border ${
                             skill.highlight
-                              ? 'bg-slate-900/90 border-slate-700/80 hover:border-cyan-400/60 shadow-sm'
+                              ? 'bg-slate-900/90 border-slate-700/90 hover:border-slate-500 shadow-sm'
                               : 'bg-slate-900/40 border-slate-800/60 hover:border-slate-700'
                           }`}
                         >
                           <div className="flex items-center justify-between mb-1.5">
                             <div className="flex items-center gap-2">
                               <div className={`p-1.5 rounded-lg ${
-                                skill.highlight ? 'bg-cyan-950/80 text-cyan-300' : 'bg-slate-800 text-slate-400'
+                                skill.highlight ? styling.iconBg : 'bg-slate-800 text-slate-400'
                               }`}>
                                 <IconComponent className="w-3.5 h-3.5" />
                               </div>
@@ -238,7 +288,7 @@ export default function Skills() {
                             </div>
 
                             {skill.highlight && (
-                              <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-cyan-950 border border-cyan-800/60 text-cyan-400">
+                              <span className={`text-[9px] font-mono font-bold px-1.5 py-0.5 rounded border ${styling.tag}`}>
                                 KEY
                               </span>
                             )}
@@ -256,8 +306,8 @@ export default function Skills() {
                 {/* Card Footer Level Guidance */}
                 <div className="mt-5 pt-3 border-t border-slate-800/60 flex items-center justify-between text-[11px] font-mono text-slate-500">
                   <span>Structured &amp; Tested</span>
-                  <span className="text-slate-400 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+                  <span className="text-slate-400 flex items-center gap-1.5">
+                    <span className={`w-1.5 h-1.5 rounded-full ${styling.dot} inline-block`} />
                     Verified Proficiency
                   </span>
                 </div>
