@@ -24,8 +24,8 @@ const roles = [
 
 const floatingBadges = [
   { name: 'Python', icon: '🐍', color: '#38BDF8', top: '-14px', right: '24px' },
-  { name: 'SQL & DB', icon: '🗄️', color: '#22D3EE', bottom: '-15px', right: '40px' },
-  { name: 'FastAPI', icon: '⚡', color: '#10B981', top: '45%', right: '-24px' },
+  { name: 'SQL (5★ Gold)', icon: '🗄️', color: '#22D3EE', bottom: '-15px', right: '40px' },
+  { name: 'Express.js', icon: '⚡', color: '#10B981', top: '45%', right: '-24px' },
   { name: 'TensorFlow', icon: '🧠', color: '#F59E0B', bottom: '25%', left: '-20px' },
   { name: 'Power BI', icon: '📊', color: '#8B5CF6', top: '15%', left: '-22px' },
 ];
@@ -275,9 +275,10 @@ export default function Hero() {
                   <span className="text-cyan-400">skills</span>: [
                   <span className="text-amber-300">&quot;Python&quot;</span>,{' '}
                   <span className="text-amber-300">&quot;SQL&quot;</span>,{' '}
+                  <span className="text-amber-300">&quot;C++&quot;</span>,{' '}
                   <span className="text-amber-300">&quot;Machine Learning&quot;</span>,{' '}
-                  <span className="text-amber-300">&quot;FastAPI&quot;</span>,{' '}
-                  <span className="text-amber-300">&quot;Power BI&quot;</span>
+                  <span className="text-amber-300">&quot;Power BI&quot;</span>,{' '}
+                  <span className="text-amber-300">&quot;Express.js&quot;</span>
                   ],
                 </div>
 

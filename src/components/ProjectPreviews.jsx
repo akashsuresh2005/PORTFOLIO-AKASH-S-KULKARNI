@@ -5,16 +5,15 @@ import {
   CheckCircle2, 
   Clock, 
   Bell, 
-  Thermometer, 
-  Layers,
-  BarChart3,
-  TrendingUp,
-  Cpu
+  Layers, 
+  BarChart3, 
+  TrendingUp, 
+  AlertCircle 
 } from 'lucide-react';
 
 export default function ProjectPreview({ type, project }) {
-  if (type === 'agri-dashboard') {
-    return <AgriPreview />;
+  if (type === 'supply-dashboard') {
+    return <SupplyChainPreview />;
   }
   if (type === 'pneuscan-medical') {
     return <PneuScanPreview project={project} />;
@@ -22,87 +21,63 @@ export default function ProjectPreview({ type, project }) {
   if (type === 'smartshelf-inventory') {
     return <SmartShelfPreview />;
   }
+  if (type === 'agri-dashboard') {
+    return <AgriPreview />;
+  }
   if (type === 'crypto-charts') {
     return <CryptoPreview />;
-  }
-  if (type === 'supply-dashboard') {
-    return <SupplyChainPreview />;
   }
   return null;
 }
 
-// 1. Agri Loss AI Dashboard Preview
-function AgriPreview() {
+// 1. Supply Chain Dashboard Preview
+function SupplyChainPreview() {
   return (
     <div className="w-full bg-[#0A0E1A] border border-slate-800 rounded-xl overflow-hidden font-mono text-xs">
       {/* Topbar Header */}
       <div className="bg-[#070A12] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-slate-300">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="font-semibold text-emerald-400 text-xs">AgriLogix Telemetry</span>
+          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          <span className="font-semibold text-cyan-400 text-xs">Supply Chain Analytics</span>
         </div>
-        <span className="text-[11px] text-slate-400">Karnataka Hubs: Active</span>
+        <span className="text-[11px] text-slate-400">30K Combinations</span>
       </div>
 
       {/* Spacious 2-Column KPI Cards */}
       <div className="grid grid-cols-2 gap-3 p-4 bg-slate-900/30">
         <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800/90">
-          <div className="text-[11px] text-slate-400 flex items-center gap-1.5 mb-1">
-            <Activity className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Spoilage Probability</span>
-          </div>
-          <div className="text-base font-bold text-emerald-400">12.4% (Low Risk)</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">XGBoost Regressor</div>
+          <div className="text-[11px] text-slate-400 mb-1">Stockout Risk</div>
+          <div className="text-base font-bold text-emerald-400">1.4% (Low)</div>
+          <div className="text-[10px] text-slate-500 mt-0.5">3+ Data Pipelines</div>
         </div>
 
         <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800/90">
-          <div className="text-[11px] text-slate-400 flex items-center gap-1.5 mb-1">
-            <Clock className="w-3.5 h-3.5 text-amber-400" />
-            <span>Remaining Shelf Life</span>
-          </div>
-          <div className="text-base font-bold text-amber-300">8.5 Days</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Ambient: 24°C • 82% RH</div>
+          <div className="text-[11px] text-slate-400 mb-1">Inventory Turnover</div>
+          <div className="text-base font-bold text-cyan-400">4.2x / Quarter</div>
+          <div className="text-[10px] text-slate-500 mt-0.5">SQL Cleansed Schema</div>
         </div>
       </div>
 
-      {/* Route & Cold Storage Strip */}
+      {/* Progress Breakdown Bars */}
       <div className="px-4 pb-4 pt-1 space-y-2.5">
-        <div className="p-3 rounded-lg bg-slate-950/80 border border-slate-800/80 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-500/40 flex items-center justify-center text-xs">
-              🌱
-            </div>
-            <div>
-              <div className="text-xs font-bold text-white">Belgaum Farm</div>
-              <div className="text-[10px] text-slate-400">Origin Source</div>
-            </div>
+        <div>
+          <div className="flex justify-between text-xs mb-1 text-slate-300">
+            <span>Fast-Moving SKUs (Tier 1)</span>
+            <span className="text-emerald-400 font-bold">54%</span>
           </div>
-
-          <div className="flex flex-col items-center px-2">
-            <span className="text-[10px] text-cyan-400 font-semibold">142 km Transit</span>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 mt-1 rounded-full" />
-          </div>
-
-          <div className="flex items-center gap-2 text-right">
-            <div>
-              <div className="text-xs font-bold text-white">Hassan Central</div>
-              <div className="text-[10px] text-emerald-400">78% Storage Free</div>
-            </div>
-            <div className="w-7 h-7 rounded-lg bg-cyan-950 border border-cyan-500/40 flex items-center justify-center text-xs">
-              ❄️
-            </div>
+          <div className="w-full bg-slate-950 rounded-full h-2">
+            <div className="bg-emerald-400 h-2 rounded-full" style={{ width: '54%' }} />
           </div>
         </div>
 
-        {/* Quality Classifier Output */}
-        <div className="p-2.5 rounded-lg bg-slate-900/70 border border-slate-800 flex items-center justify-between text-xs">
-          <span className="text-slate-300 flex items-center gap-1.5">
-            <Layers className="w-3.5 h-3.5 text-cyan-400" />
-            <span>MobileNetV2 Vision:</span>
-          </span>
-          <span className="font-bold text-emerald-400 px-2.5 py-0.5 rounded bg-emerald-950/80 border border-emerald-800/60 text-[11px]">
-            Grade A Fresh (96.8%)
-          </span>
+        <div>
+          <div className="flex justify-between text-xs mb-1 text-slate-300">
+            <span>Seasonal &amp; Steady Demand</span>
+            <span className="text-sky-400 font-bold">31%</span>
+          </div>
+          <div className="w-full bg-slate-950 rounded-full h-2">
+            <div className="bg-sky-400 h-2 rounded-full" style={{ width: '31%' }} />
+          </div>
         </div>
       </div>
     </div>
@@ -119,7 +94,7 @@ function PneuScanPreview({ project }) {
       <div className="bg-[#070A12] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-slate-300">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
-          <span className="font-semibold text-sky-400 text-xs">Clinical AI Diagnostic Engine</span>
+          <span className="font-semibold text-sky-400 text-xs">Clinical Diagnostic AI</span>
         </div>
         <span className="text-[11px] text-slate-400">Inference: 1.2s</span>
       </div>
@@ -194,10 +169,10 @@ function PneuScanPreview({ project }) {
   );
 }
 
-// 3. SmartShelf AI Inventory Preview
+// 3. SmartShelf AI Inventory Preview (Clean Vertical Stack - Zero Label Overlap)
 function SmartShelfPreview() {
   const items = [
-    { name: 'Organic Whole Milk', cat: 'Dairy', exp: 'Expires in 2 Days', urgent: true },
+    { name: 'Organic Whole Milk', cat: 'Dairy', exp: '2 Days Left', urgent: true },
     { name: 'Amoxicillin 500mg', cat: 'Medicine', exp: '14 Days Safe', urgent: false },
     { name: 'Fresh Greek Yogurt', cat: 'Dairy', exp: 'Expires Tomorrow', urgent: true },
     { name: 'Whole Wheat Bread', cat: 'Bakery', exp: '4 Days Safe', urgent: false },
@@ -209,39 +184,42 @@ function SmartShelfPreview() {
       <div className="bg-[#070A12] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-slate-300">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
-          <span className="font-semibold text-violet-400 text-xs">SmartShelf Automated Audit</span>
+          <span className="font-semibold text-violet-400 text-xs">SmartShelf Audit</span>
         </div>
-        <span className="text-[11px] text-slate-400">Node-Cron: Running</span>
+        <span className="text-[11px] text-slate-400">Node-Cron: Active</span>
       </div>
 
-      {/* Spacious 2-Column Product Grid */}
-      <div className="p-4 space-y-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-          {items.map((item) => (
-            <div
-              key={item.name}
-              className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 flex items-center justify-between"
-            >
-              <div>
-                <div className="text-[10px] text-slate-400">{item.cat}</div>
-                <div className="text-xs font-bold text-white mt-0.5">{item.name}</div>
-              </div>
-              <span className={`px-2 py-0.5 rounded text-[10px] font-bold shrink-0 ml-2 ${
-                item.urgent 
-                  ? 'bg-rose-950 text-rose-300 border border-rose-800/60' 
-                  : 'bg-emerald-950 text-emerald-300 border border-emerald-800/60'
-              }`}>
-                {item.exp}
+      {/* Clean Single-Column Stack: No Crowding, No Overlapping Text */}
+      <div className="p-4 space-y-2.5">
+        {items.map((item) => (
+          <div
+            key={item.name}
+            className="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800/90 flex items-center justify-between gap-3"
+          >
+            <div className="flex items-center gap-2.5 min-w-0">
+              <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 shrink-0">
+                {item.cat}
+              </span>
+              <span className="text-xs font-bold text-white truncate">
+                {item.name}
               </span>
             </div>
-          ))}
-        </div>
 
-        {/* Alert Delivery Strip */}
-        <div className="p-3 rounded-lg bg-violet-950/30 border border-violet-800/50 flex items-center justify-between text-xs">
+            <span className={`px-2.5 py-0.5 rounded text-[10px] font-bold shrink-0 ${
+              item.urgent 
+                ? 'bg-rose-950 text-rose-300 border border-rose-800/70' 
+                : 'bg-emerald-950 text-emerald-300 border border-emerald-800/70'
+            }`}>
+              {item.exp}
+            </span>
+          </div>
+        ))}
+
+        {/* Clean Alert Status Strip */}
+        <div className="p-2.5 rounded-lg bg-violet-950/30 border border-violet-800/50 flex items-center justify-between text-xs mt-3">
           <div className="flex items-center gap-2 text-violet-300">
-            <Bell className="w-4 h-4 text-violet-400 shrink-0" />
-            <span>Nodemailer + Web-Push: 2 Alerts Dispatched</span>
+            <Bell className="w-3.5 h-3.5 text-violet-400 shrink-0" />
+            <span className="text-[11px]">2 Automated Alerts Dispatched</span>
           </div>
           <span className="text-emerald-400 font-bold text-[11px]">Synced</span>
         </div>
@@ -250,7 +228,85 @@ function SmartShelfPreview() {
   );
 }
 
-// 4. Crypto BTC Analysis Preview
+// 4. Agri Loss AI Dashboard Preview (AgriLogix)
+function AgriPreview() {
+  return (
+    <div className="w-full bg-[#0A0E1A] border border-slate-800 rounded-xl overflow-hidden font-mono text-xs">
+      {/* Topbar Header */}
+      <div className="bg-[#070A12] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-slate-300">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="font-semibold text-emerald-400 text-xs">AgriLogix Telemetry</span>
+        </div>
+        <span className="text-[11px] text-slate-400">Karnataka Hubs</span>
+      </div>
+
+      {/* Spacious 2-Column KPI Cards */}
+      <div className="grid grid-cols-2 gap-3 p-4 bg-slate-900/30">
+        <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800/90">
+          <div className="text-[11px] text-slate-400 flex items-center gap-1.5 mb-1">
+            <Activity className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Spoilage Probability</span>
+          </div>
+          <div className="text-base font-bold text-emerald-400">12.4% (Low)</div>
+          <div className="text-[10px] text-slate-500 mt-0.5">XGBoost Regressor</div>
+        </div>
+
+        <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800/90">
+          <div className="text-[11px] text-slate-400 flex items-center gap-1.5 mb-1">
+            <Clock className="w-3.5 h-3.5 text-amber-400" />
+            <span>Remaining Shelf Life</span>
+          </div>
+          <div className="text-base font-bold text-amber-300">8.5 Days</div>
+          <div className="text-[10px] text-slate-500 mt-0.5">Ambient: 24°C • 82% RH</div>
+        </div>
+      </div>
+
+      {/* Route & Cold Storage Strip */}
+      <div className="px-4 pb-4 pt-1 space-y-2.5">
+        <div className="p-3 rounded-lg bg-slate-950/80 border border-slate-800/80 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 rounded-lg bg-emerald-950 border border-emerald-500/40 flex items-center justify-center text-xs">
+              🌱
+            </div>
+            <div>
+              <div className="text-xs font-bold text-white">Belgaum Farm</div>
+              <div className="text-[10px] text-slate-400">Origin Source</div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center px-2">
+            <span className="text-[10px] text-cyan-400 font-semibold">142 km Transit</span>
+            <div className="w-20 h-0.5 bg-gradient-to-r from-emerald-400 to-cyan-400 mt-1 rounded-full" />
+          </div>
+
+          <div className="flex items-center gap-2 text-right">
+            <div>
+              <div className="text-xs font-bold text-white">Hassan Central</div>
+              <div className="text-[10px] text-emerald-400">78% Storage Free</div>
+            </div>
+            <div className="w-7 h-7 rounded-lg bg-cyan-950 border border-cyan-500/40 flex items-center justify-center text-xs">
+              ❄️
+            </div>
+          </div>
+        </div>
+
+        {/* Quality Classifier Output */}
+        <div className="p-2.5 rounded-lg bg-slate-900/70 border border-slate-800 flex items-center justify-between text-xs">
+          <span className="text-slate-300 flex items-center gap-1.5">
+            <Layers className="w-3.5 h-3.5 text-cyan-400" />
+            <span>MobileNetV2 Vision:</span>
+          </span>
+          <span className="font-bold text-emerald-400 px-2.5 py-0.5 rounded bg-emerald-950/80 border border-emerald-800/60 text-[11px]">
+            Grade A Fresh (96.8%)
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 5. Crypto BTC Analysis Preview
 function CryptoPreview() {
   return (
     <div className="w-full bg-[#0A0E1A] border border-slate-800 rounded-xl overflow-hidden font-mono text-xs">
@@ -258,7 +314,7 @@ function CryptoPreview() {
       <div className="bg-[#070A12] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-slate-300">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-          <span className="font-semibold text-amber-400 text-xs">Power BI Time-Series Intelligence</span>
+          <span className="font-semibold text-amber-400 text-xs">Power BI Intelligence</span>
         </div>
         <span className="text-[11px] text-slate-400">23 Cryptos Modeled</span>
       </div>
@@ -301,60 +357,6 @@ function CryptoPreview() {
             <span className="w-2.5 h-0.5 bg-cyan-400 inline-block rounded-full" /> 300-Day MA Benchmark
           </span>
           <span className="text-emerald-400 font-semibold">Live Power BI Service</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// 5. Supply Chain Dashboard Preview
-function SupplyChainPreview() {
-  return (
-    <div className="w-full bg-[#0A0E1A] border border-slate-800 rounded-xl overflow-hidden font-mono text-xs">
-      {/* Topbar Header */}
-      <div className="bg-[#070A12] px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-slate-300">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span className="font-semibold text-cyan-400 text-xs">Supply Chain Executive BI</span>
-        </div>
-        <span className="text-[11px] text-slate-400">30K Product-Store Combos</span>
-      </div>
-
-      {/* Spacious 2-Column KPI Cards */}
-      <div className="grid grid-cols-2 gap-3 p-4 bg-slate-900/30">
-        <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800/90">
-          <div className="text-[11px] text-slate-400 mb-1">Stockout Risk</div>
-          <div className="text-base font-bold text-emerald-400">1.4% (Minimal)</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">3+ Data Sources Ingested</div>
-        </div>
-
-        <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800/90">
-          <div className="text-[11px] text-slate-400 mb-1">Inventory Turnover</div>
-          <div className="text-base font-bold text-cyan-400">4.2x / Quarter</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">SQL Cleansed Pipeline</div>
-        </div>
-      </div>
-
-      {/* Progress Breakdown Bars */}
-      <div className="px-4 pb-4 pt-1 space-y-2.5">
-        <div>
-          <div className="flex justify-between text-xs mb-1 text-slate-300">
-            <span>Fast-Moving SKUs (Tier 1)</span>
-            <span className="text-emerald-400 font-bold">54%</span>
-          </div>
-          <div className="w-full bg-slate-950 rounded-full h-2">
-            <div className="bg-emerald-400 h-2 rounded-full" style={{ width: '54%' }} />
-          </div>
-        </div>
-
-        <div>
-          <div className="flex justify-between text-xs mb-1 text-slate-300">
-            <span>Seasonal &amp; Steady Demand</span>
-            <span className="text-sky-400 font-bold">31%</span>
-          </div>
-          <div className="w-full bg-slate-950 rounded-full h-2">
-            <div className="bg-sky-400 h-2 rounded-full" style={{ width: '31%' }} />
-          </div>
         </div>
       </div>
     </div>

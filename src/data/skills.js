@@ -2,13 +2,12 @@ export const skillCategories = [
   {
     id: 'programming',
     title: 'Programming Languages',
-    description: 'Core languages for algorithm design, data engineering, and backend logic',
+    description: 'Core languages for algorithmic problem-solving and software engineering',
     accent: 'blue',
     skills: [
-      { name: 'Python', level: 'Core', highlight: true, icon: 'Code2', desc: 'FastAPI, ML, Pandas, Automation, Scripting' },
-      { name: 'SQL', level: 'Advanced', highlight: true, icon: 'Database', desc: 'Complex Joins, Window Functions, Query Optimization' },
-      { name: 'C++', level: 'Proficient', highlight: false, icon: 'Terminal', desc: 'Data Structures & Algorithms, Object-Oriented Design' },
-      { name: 'JavaScript', level: 'Proficient', highlight: false, icon: 'Braces', desc: 'ES6+, Asynchronous Programming, Node.js Backend' },
+      { name: 'Python', level: 'Core', highlight: true, icon: 'Code2', desc: 'Data Analytics, ML Pipelines, Automation & Scripting' },
+      { name: 'SQL', level: 'Advanced', highlight: true, icon: 'Database', desc: 'Complex Joins, Window Functions, Query Optimization (5★ Gold)' },
+      { name: 'C++', level: 'Proficient', highlight: false, icon: 'Terminal', desc: 'Object-Oriented Programming, Memory Basics & Logic' },
     ],
   },
   {
@@ -43,11 +42,9 @@ export const skillCategories = [
   {
     id: 'backend_web',
     title: 'Backend & Web Technologies',
-    description: 'Robust server architectures, RESTful APIs, and secure authentication',
+    description: 'Robust server routing, RESTful APIs, and secure authentication',
     accent: 'violet',
     skills: [
-      { name: 'FastAPI', level: 'Core', highlight: true, icon: 'Zap', desc: 'High-Performance Python Microservices, Pydantic' },
-      { name: 'Node.js', level: 'Proficient', highlight: true, icon: 'Server', desc: 'Asynchronous Event-Driven Runtime Environment' },
       { name: 'Express.js', level: 'Proficient', highlight: true, icon: 'Cpu', desc: 'Middleware Architecture, Routing, RESTful Endpoints' },
       { name: 'REST APIs', level: 'Proficient', highlight: true, icon: 'Network', desc: 'Stateless Service Contracts, CRUD, Status Protocol' },
       { name: 'JWT Authentication', level: 'Proficient', highlight: false, icon: 'KeyRound', desc: 'Token-Based Security, Role-Based Access Control' },
@@ -64,16 +61,15 @@ export const skillCategories = [
       { name: 'MongoDB', level: 'Proficient', highlight: true, icon: 'HardDrive', desc: 'Document Schema Design, Aggregation Framework' },
       { name: 'Oracle SQL', level: 'Proficient', highlight: false, icon: 'TableProperties', desc: 'Enterprise Relational Queries, Stored Procedures' },
       { name: 'PostgreSQL', level: 'Proficient', highlight: true, icon: 'Layers', desc: 'ACID Compliance, Complex Queries, ORM Integration' },
-      { name: 'SQLite', level: 'Proficient', highlight: false, icon: 'FileSpreadsheet', desc: 'Lightweight Embedded Database with WAL Mode' },
     ],
   },
   {
     id: 'core_cs',
     title: 'Core Computer Science',
-    description: 'Foundational engineering principles, data structures, and system internals',
+    description: 'Foundational engineering principles, algorithms, and system internals',
     accent: 'cyan',
     skills: [
-      { name: 'Data Structures & Algorithms', level: 'Strong', highlight: true, icon: 'Binary', desc: '150+ Problems Solved on LeetCode & HackerRank' },
+      { name: 'SQL & Basic DSA', level: 'Practiced', highlight: true, icon: 'Binary', desc: '150+ questions across LeetCode & HackerRank • Basic DSA' },
       { name: 'Object-Oriented Programming', level: 'Strong', highlight: true, icon: 'Boxes', desc: 'Encapsulation, Inheritance, Polymorphism, Design Patterns' },
       { name: 'DBMS', level: 'Strong', highlight: true, icon: 'Database', desc: 'Transactions, ACID Properties, Normalization Forms' },
       { name: 'Operating Systems', level: 'Strong', highlight: false, icon: 'Cpu', desc: 'Process Scheduling, Concurrency, Virtual Memory' },
