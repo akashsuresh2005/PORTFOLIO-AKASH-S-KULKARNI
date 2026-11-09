@@ -77,8 +77,8 @@ export const educationList = [
     status: 'In Progress (Expected 2027)',
     highlights: [
       'Core focus: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems',
-      'Operating Systems, Computer Networks, and Full-Stack Software Engineering',
-      'Active developer building production-grade AI and full-stack solutions alongside curriculum',
+      'Operating Systems, Computer Networks, and Software Engineering',
+      'Active developer building production-grade AI and backend software solutions alongside curriculum',
     ],
   },
   {

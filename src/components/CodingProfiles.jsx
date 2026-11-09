@@ -113,7 +113,7 @@ export default function CodingProfiles() {
                         PneuScan-AI-Multimodal-Pneumonia-Detection
                       </div>
                       <div className="text-[11px] text-slate-500 font-mono">
-                        Python • Keras • React • FastAPI
+                        Python • TensorFlow • Keras • Express.js
                       </div>
                     </div>
                   </div>

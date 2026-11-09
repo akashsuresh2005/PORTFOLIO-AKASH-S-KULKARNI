@@ -1,5 +1,19 @@
 export const skillCategories = [
   {
+    id: 'core_cs',
+    title: 'Core Computer Science',
+    description: 'Foundational engineering principles, algorithms, and system internals',
+    accent: 'cyan',
+    skills: [
+      { name: 'SQL & Basic DSA', level: 'Practiced', highlight: true, icon: 'Binary', desc: '150+ questions across LeetCode & HackerRank • Basic DSA' },
+      { name: 'Object-Oriented Programming', level: 'Strong', highlight: true, icon: 'Boxes', desc: 'Encapsulation, Inheritance, Polymorphism, Design Patterns' },
+      { name: 'DBMS', level: 'Strong', highlight: true, icon: 'Database', desc: 'Transactions, ACID Properties, Normalization Forms' },
+      { name: 'Operating Systems', level: 'Strong', highlight: false, icon: 'Cpu', desc: 'Process Scheduling, Concurrency, Virtual Memory' },
+      { name: 'Computer Networks', level: 'Strong', highlight: false, icon: 'Network', desc: 'TCP/IP Model, HTTP Protocols, Network Architecture' },
+      { name: 'System Design', level: 'Proficient', highlight: false, icon: 'Network', desc: 'Client-Server Architecture, Scalability, Caching' },
+    ],
+  },
+  {
     id: 'programming',
     title: 'Programming Languages',
     description: 'Core languages for algorithmic problem-solving and software engineering',
@@ -8,20 +22,6 @@ export const skillCategories = [
       { name: 'Python', level: 'Core', highlight: true, icon: 'Code2', desc: 'Data Analytics, ML Pipelines, Automation & Scripting' },
       { name: 'SQL', level: 'Advanced', highlight: true, icon: 'Database', desc: 'Complex Joins, Window Functions, Query Optimization (5★ Gold)' },
       { name: 'C++', level: 'Proficient', highlight: false, icon: 'Terminal', desc: 'Object-Oriented Programming, Memory Basics & Logic' },
-    ],
-  },
-  {
-    id: 'ai_ml',
-    title: 'Artificial Intelligence & Machine Learning',
-    description: 'Supervised learning, deep learning, computer vision, and predictive analytics',
-    accent: 'violet',
-    skills: [
-      { name: 'Scikit-learn', level: 'Core', highlight: true, icon: 'BrainCircuit', desc: 'Regression, Classification Pipelines, Model Evaluation' },
-      { name: 'TensorFlow & Keras', level: 'Proficient', highlight: true, icon: 'Boxes', desc: 'Deep Neural Networks, CNN Architectures, Model Training' },
-      { name: 'MobileNetV2', level: 'Proficient', highlight: true, icon: 'Eye', desc: 'Transfer Learning & Produce Freshness Classification' },
-      { name: 'XGBoost', level: 'Proficient', highlight: true, icon: 'TrendingUp', desc: 'Gradient Boosted Decision Trees & Spoilage Regression' },
-      { name: 'Time Series Forecasting', level: 'Proficient', highlight: false, icon: 'Activity', desc: 'Moving Averages, Trend Modeling, Price Forecasts' },
-      { name: 'Exploratory Data Analysis', level: 'Advanced', highlight: true, icon: 'SearchCheck', desc: 'Statistical Summaries, Outlier Detection, Feature Engineering' },
     ],
   },
   {
@@ -52,6 +52,20 @@ export const skillCategories = [
     ],
   },
   {
+    id: 'ai_ml',
+    title: 'Artificial Intelligence & Machine Learning',
+    description: 'Supervised learning, deep learning, computer vision, and predictive analytics',
+    accent: 'violet',
+    skills: [
+      { name: 'Scikit-learn', level: 'Core', highlight: true, icon: 'BrainCircuit', desc: 'Regression, Classification Pipelines, Model Evaluation' },
+      { name: 'TensorFlow & Keras', level: 'Proficient', highlight: true, icon: 'Boxes', desc: 'Deep Neural Networks, CNN Architectures, Model Training' },
+      { name: 'MobileNetV2', level: 'Proficient', highlight: true, icon: 'Eye', desc: 'Transfer Learning & Produce Freshness Classification' },
+      { name: 'XGBoost', level: 'Proficient', highlight: true, icon: 'TrendingUp', desc: 'Gradient Boosted Decision Trees & Spoilage Regression' },
+      { name: 'Time Series Forecasting', level: 'Proficient', highlight: false, icon: 'Activity', desc: 'Moving Averages, Trend Modeling, Price Forecasts' },
+      { name: 'Exploratory Data Analysis', level: 'Advanced', highlight: true, icon: 'SearchCheck', desc: 'Statistical Summaries, Outlier Detection, Feature Engineering' },
+    ],
+  },
+  {
     id: 'databases',
     title: 'Databases & Data Storage',
     description: 'Relational schemas, NoSQL document stores, and query optimization',
@@ -61,20 +75,6 @@ export const skillCategories = [
       { name: 'MongoDB', level: 'Proficient', highlight: true, icon: 'HardDrive', desc: 'Document Schema Design, Aggregation Framework' },
       { name: 'Oracle SQL', level: 'Proficient', highlight: false, icon: 'TableProperties', desc: 'Enterprise Relational Queries, Stored Procedures' },
       { name: 'PostgreSQL', level: 'Proficient', highlight: true, icon: 'Layers', desc: 'ACID Compliance, Complex Queries, ORM Integration' },
-    ],
-  },
-  {
-    id: 'core_cs',
-    title: 'Core Computer Science',
-    description: 'Foundational engineering principles, algorithms, and system internals',
-    accent: 'cyan',
-    skills: [
-      { name: 'SQL & Basic DSA', level: 'Practiced', highlight: true, icon: 'Binary', desc: '150+ questions across LeetCode & HackerRank • Basic DSA' },
-      { name: 'Object-Oriented Programming', level: 'Strong', highlight: true, icon: 'Boxes', desc: 'Encapsulation, Inheritance, Polymorphism, Design Patterns' },
-      { name: 'DBMS', level: 'Strong', highlight: true, icon: 'Database', desc: 'Transactions, ACID Properties, Normalization Forms' },
-      { name: 'Operating Systems', level: 'Strong', highlight: false, icon: 'Cpu', desc: 'Process Scheduling, Concurrency, Virtual Memory' },
-      { name: 'Computer Networks', level: 'Strong', highlight: false, icon: 'Network', desc: 'TCP/IP Model, HTTP Protocols, Network Architecture' },
-      { name: 'System Design', level: 'Proficient', highlight: false, icon: 'Network', desc: 'Client-Server Architecture, Scalability, Caching' },
     ],
   },
   {

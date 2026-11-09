@@ -38,7 +38,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
-              Computer Science Engineering student at Bangalore Institute of Technology. Building intelligent, scalable, and verified software solutions across full-stack engineering and machine learning.
+              Computer Science Engineering student at Bangalore Institute of Technology. Building intelligent, scalable, and verified software solutions across software systems, data analytics, and machine learning.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
