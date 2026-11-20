@@ -42,13 +42,15 @@ export const skillCategories = [
   {
     id: 'backend_web',
     title: 'Backend & Web Technologies',
-    description: 'Robust server routing, RESTful APIs, and secure authentication',
+    description: 'Robust server routing, RESTful APIs, and modern web foundations',
     accent: 'fuchsia',
     skills: [
       { name: 'Express.js', level: 'Proficient', highlight: true, icon: 'Cpu', desc: 'Middleware Architecture, Routing, RESTful Endpoints' },
       { name: 'REST APIs', level: 'Proficient', highlight: true, icon: 'Network', desc: 'Stateless Service Contracts, CRUD, Status Protocol' },
       { name: 'JWT Authentication', level: 'Proficient', highlight: false, icon: 'KeyRound', desc: 'Token-Based Security, Role-Based Access Control' },
       { name: 'AWS', level: 'Foundational', highlight: false, icon: 'Cloud', desc: 'Cloud Infrastructure Basics, S3 Storage, EC2' },
+      { name: 'HTML', level: 'Proficient', highlight: false, icon: 'FileCode', desc: 'Semantic Structure & Modern Web Standards' },
+      { name: 'CSS', level: 'Proficient', highlight: false, icon: 'Palette', desc: 'Responsive Layouts, Flexbox, Grid & UI Styling' },
     ],
   },
   {
