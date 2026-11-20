@@ -16,10 +16,8 @@ import {
 } from 'lucide-react';
 
 const roles = [
-  'Software Engineer',
-  'Data Analyst',
-  'Machine Learning Engineer',
-  'Python & SQL Specialist',
+  'Software Developer',
+  'Data Analyst Enthusiast',
   'Problem Solver',
 ];
 
