@@ -5,12 +5,12 @@ export const skillCategories = [
     description: 'Foundational engineering principles, algorithms, and system internals',
     accent: 'cyan',
     skills: [
-      { name: 'SQL & Basic DSA', level: 'Practiced', highlight: true, icon: 'Binary', desc: '150+ questions across LeetCode & HackerRank • Basic DSA' },
       { name: 'Object-Oriented Programming', level: 'Strong', highlight: true, icon: 'Boxes', desc: 'Encapsulation, Inheritance, Polymorphism, Design Patterns' },
       { name: 'DBMS', level: 'Strong', highlight: true, icon: 'Database', desc: 'Transactions, ACID Properties, Normalization Forms' },
       { name: 'Operating Systems', level: 'Strong', highlight: false, icon: 'Cpu', desc: 'Process Scheduling, Concurrency, Virtual Memory' },
       { name: 'Computer Networks', level: 'Strong', highlight: false, icon: 'Network', desc: 'TCP/IP Model, HTTP Protocols, Network Architecture' },
       { name: 'System Design', level: 'Proficient', highlight: false, icon: 'Network', desc: 'Client-Server Architecture, Scalability, Caching' },
+      { name: 'SQL & Basic DSA', level: 'Practiced', highlight: true, icon: 'Binary', desc: '150+ questions across LeetCode & HackerRank • Basic DSA' },
     ],
   },
   {
@@ -19,9 +19,9 @@ export const skillCategories = [
     description: 'Core languages for algorithmic problem-solving and software engineering',
     accent: 'blue',
     skills: [
-      { name: 'Python', level: 'Core', highlight: true, icon: 'Code2', desc: 'Data Analytics, ML Pipelines, Automation & Scripting' },
       { name: 'SQL', level: 'Advanced', highlight: true, icon: 'Database', desc: 'Complex Joins, Window Functions, Query Optimization (5★ Gold)' },
       { name: 'C++', level: 'Proficient', highlight: false, icon: 'Terminal', desc: 'Object-Oriented Programming, Memory Basics & Logic' },
+      { name: 'Python', level: 'Core', highlight: true, icon: 'Code2', desc: 'Data Analytics, ML Pipelines, Automation & Scripting' },
     ],
   },
   {
